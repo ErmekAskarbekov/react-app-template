@@ -1,8 +1,13 @@
-import React, {FC, PropsWithChildren} from 'react';
+import React, {FC, ReactNode} from 'react';
 
-const Container: FC<PropsWithChildren> = ({children}) => {
+interface Props {
+    children: ReactNode;
+    className?: string;
+}
+
+const Container: FC<Props> = ({children, className}) => {
     return (
-        <div className='container mx-auto px-[15px]'>
+        <div className={`container mx-auto px-[15px] ${className}`}>
             {children}
         </div>
     );
