@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 import {Route, Routes} from "react-router-dom";
 import Home from "screens/home";
-import Add from "../screens/add";
-import About from "../screens/about";
-import Contacts from "../screens/contacts";
+import Add from "screens/add";
+import About from "screens/about";
+import Contacts from "screens/contacts";
 
 const RoutesList: FC = () => {
     return (
