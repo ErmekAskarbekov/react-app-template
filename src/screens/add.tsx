@@ -3,8 +3,10 @@ import Container from "components/UI/Container";
 import Input from "components/UI/Input";
 import Button from "components/UI/Button";
 import FireBase from "utils/axios";
+import {useNavigate} from "react-router-dom";
 
 const Add = () => {
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [values, setValues] = useState({
         title: '',
@@ -22,8 +24,10 @@ const Add = () => {
     const newPostRequest = async () => {
         setLoading(true);
         try {
-            await FireBase.post('posts.json', values);
+            const date = Date.now();
+            await FireBase.post('posts.json', {date: new Date(date).toDateString(), ...values});
             setLoading(false);
+            navigate('/');
         } catch (e) {
             setLoading(false);
             console.log(e);
