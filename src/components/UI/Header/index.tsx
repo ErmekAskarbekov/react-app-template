@@ -11,9 +11,9 @@ const Header: FC<Props> = ({links}) => {
         <header
             className='flex justify-between items-center h-[60px] bg-white sticky top-0 shadow-2xl'>
             <Container>
-                <ul className="flex justify-between ">
+                <ul className="flex">
                     {links.map((link) => (
-                        <li className='list-none mr-2 text-black hover:text-gray-600 transition-all font-s text-s'
+                        <li className='list-none mr-10 text-black hover:text-gray-600 transition-all font-s text-s'
                             key={`link/${link.url}`}>
                             <a href={link.url}>{link.title}</a>
                         </li>
