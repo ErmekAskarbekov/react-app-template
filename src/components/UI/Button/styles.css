@@ -9,7 +9,7 @@
     align-items:center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border-radius:1rem;
     color:#fff;
     cursor:pointer;
@@ -20,7 +20,6 @@
     display: block;
     width: 25px;
     height: 25px;
-    margin: 8px;
     border-radius: 50%;
     border: 3px solid;
     border-color: #fff transparent #fff transparent;

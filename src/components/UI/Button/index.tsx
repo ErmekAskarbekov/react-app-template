@@ -10,7 +10,7 @@ interface Props {
 const Button:FC<Props> = ({handleClick, title, disabled}) => {
     return (
         <button className="btn-process" disabled={disabled} onClick={handleClick}>
-            {title}
+            {!disabled && title}
             {disabled && <span className="btn-ring"></span>}
         </button>
     );
